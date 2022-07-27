@@ -25,10 +25,11 @@ class PairFinder {
   }
 }
 
-object Tester {
+object Tester2 {
   def main(args: Array[String]) = {
     println("Initial structure")
     val input = List[Int](4, 8, 9, 0, 12, 1, 4, 2, 12, 12, 4, 4, 8, 11, 12, 0).sortWith(_ < _)
+    val fileIO=new FileIO()
     val pf= new PairFinder()
     println(pf.task_algorithm(input,12))
   }
