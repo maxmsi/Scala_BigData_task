@@ -6,4 +6,6 @@ lazy val root = (project in file("."))
   .settings(
     name := "Datumo_recruitment_assignment",
     idePackagePrefix := Some("io.datumo.recruitment")
+
   )
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.12" % Test

@@ -2,6 +2,6 @@
 Dautmo recruitment task : Find a pair of natural number whose sum hit the target numer from specified input. 
 
 
-Candidate detals:
+Candidate details:
 Name: Kamil
 Surname: Babik

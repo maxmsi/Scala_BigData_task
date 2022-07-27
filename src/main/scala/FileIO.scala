@@ -3,7 +3,9 @@ package io.datumo.recruitment
 import java.io.{BufferedWriter, File, FileNotFoundException, FileWriter, IOException}
 import java.net.URI
 import java.nio.file.{Path, Paths}
+import java.time.LocalDateTime
 import scala.io.Source
+import scala.sys.runtime
 
 class FileIO {
 
@@ -29,20 +31,23 @@ class FileIO {
   def saveFileToTxt(filename: String, lines: List[List[Int]]): Unit = {
     val file = new File(filename)
     val bw = new BufferedWriter(new FileWriter(file))
-    for (line <- lines) {
-      bw.write(line.foldLeft("(")((a,b)=> s"$a, $b")+")\n")
+    val tuples: List[(Int, Int)] = lines.map{ case List(a,b) => (a,b)}
+    for (line <- tuples) {
+      bw.write(s"$line\n")
     }
     bw.close()
   }
 }
 object Tester {
   def main(args: Array[String]) = {
-    val fileIo = new FileIO();
+    val fileIo = new FileIO()
+    val pf= new PairFinder
+
     val path = Paths.get(URI.create("file:///E:/SparkScalaCourse/Datumo_recruitment_assignment/src/main/resource/input.txt"))
     val str = fileIo.readTxtFile(path)
     val input = fileIo.convertInputToList(str)
-    val pf= new PairFinder
-    val xd=(pf.task_algorithm(input,12))
-   fileIo.saveFileToTxt("1xd",xd)
+
+    val convertedResultToSave=(pf.task_algorithm(input,12))
+    fileIo.saveFileToTxt("ResultFile",convertedResultToSave)
   }
 }
