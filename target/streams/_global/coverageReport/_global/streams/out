@@ -1,0 +1,3 @@
+[info] Waiting for measurement data to sync...
+[info] Reading scoverage instrumentation [E:\SparkScalaCourse\Datumo_recruitment_assignment\target\scala-2.13\scoverage-data\scoverage.coverage]
+[warn] No coverage data, skipping reports

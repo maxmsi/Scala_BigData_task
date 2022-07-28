@@ -1,0 +1,8 @@
+[debug] Acquiring lock on file E:\SparkScalaCourse\Datumo_recruitment_assignment\project\target\.sbt-compilation-infos\root-compile\.sbt-idea-lock ...
+[warn] E:\SparkScalaCourse\Datumo_recruitment_assignment\src\main\scala\FileIO.scala:26:46: match may not be exhaustive.
+[warn] It would fail on the following inputs: List(_), Nil
+[warn]     val tuples: List[(Int, Int)] = lines.map { case List(a, b) => (a, b) }
+[warn]                                              ^
+[warn] 3 deprecations (since 2.13.3); re-run with -deprecation for details
+[warn] two warnings found
+[debug] Releasing lock on file E:\SparkScalaCourse\Datumo_recruitment_assignment\project\target\.sbt-compilation-infos\root-compile\.sbt-idea-lock.
