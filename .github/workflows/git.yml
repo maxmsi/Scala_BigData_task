@@ -6,10 +6,12 @@ on:
   push:
     branches:
       - master
+      - main
       - task_resolution
   pull_request:
     branches:
       - master
+      - main
       - task_resolution
 
   # Allows you to run this workflow manually from the Actions tab
