@@ -1,4 +1,5 @@
 
+
 name: Scala Assignment CI
 
 # Controls when the workflow will run
@@ -6,12 +7,10 @@ on:
   push:
     branches:
       - master
-      - main
       - task_resolution
   pull_request:
     branches:
       - master
-      - main
       - task_resolution
 
   # Allows you to run this workflow manually from the Actions tab
@@ -25,5 +24,8 @@ jobs:
         run: sbt coverage test
       - name: Coverage Report
         run: sbt coverageReport
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
         with:
+          token: ${{ secrets.CODECOV_TOKEN }}
           fail_ci_if_error: true
