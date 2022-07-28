@@ -10,13 +10,13 @@ class PairFinderTests extends AnyFunSuite {
     val resultMock = List(List(0, 12), List(0, 12), List(1, 11), List(4, 8), List(4, 8))
 
     val pf = new PairFinder
-    assert(pf.task_algorithm(inputMock,12) === resultMock)
+    assert(pf.taskAlgorithm(inputMock,12) === resultMock)
   }
 
   test("PairFinder.task_algorithm() should return empty List") {
 
     val pf = new PairFinder
-    assert(pf.task_algorithm(List(),12) === List.empty)
+    assert(pf.taskAlgorithm(List(),12) === List.empty)
   }
 
   test("PairFinder.task_algorithm() should return different output than Mock") {
@@ -24,7 +24,7 @@ class PairFinderTests extends AnyFunSuite {
     val resultMock = List(List(0, 12), List(0, 12), List(1, 11), List(4, 8), List(4, 8))
 
     val pf = new PairFinder
-    assert(pf.task_algorithm(inputMock,12) !== resultMock)
+    assert(pf.taskAlgorithm(inputMock,12) !== resultMock)
   }
 
 
