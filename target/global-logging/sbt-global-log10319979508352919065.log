@@ -1,0 +1,6 @@
+[debug] > Exec(clean coverage test coverageReport, None, None)
+[error] Expected whitespace character
+[error] Expected '/'
+[error] clean coverage test coverageReport
+[error]       ^
+[debug] > Exec(idea-shell, None, None)
